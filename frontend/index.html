@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DreamStay Hotel Billing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🏨 DreamStay Hotel Billing System</h1>
+
+    <div class="form-section">
+      <label>Bill Type:</label>
+      <select id="billType">
+        <option value="room">Room</option>
+        <option value="function">Function</option>
+      </select>
+
+      <label>Customer Name:</label>
+      <input type="text" id="customerName" placeholder="Enter name" />
+
+      <label>Date:</label>
+      <input type="date" id="billDate" />
+
+      <div id="roomSection">
+        <label>Room Number:</label>
+        <input type="number" id="roomNumber" placeholder="101" />
+
+        <label>Check-in Date:</label>
+        <input type="date" id="checkIn" />
+
+        <label>Check-out Date:</label>
+        <input type="date" id="checkOut" />
+
+        <label>Room Price:</label>
+        <input type="number" id="roomPrice" placeholder="10000" />
+
+        <label>Food Charges:</label>
+        <input type="number" id="breakfast" placeholder="Breakfast" />
+        <input type="number" id="lunch" placeholder="Lunch" />
+        <input type="number" id="dinner" placeholder="Dinner" />
+      </div>
+
+      <div id="functionSection" style="display:none;">
+        <label>Package:</label>
+        <select id="package">
+          <option value="Silver">Silver</option>
+          <option value="Gold">Gold</option>
+          <option value="Premium">Premium</option>
+        </select>
+
+        <label>People Count:</label>
+        <input type="number" id="people" placeholder="e.g. 50" />
+
+        <label>Price per Person:</label>
+        <input type="number" id="pricePerPerson" placeholder="e.g. 1200" />
+
+        <label>Service Charge:</label>
+        <input type="number" id="serviceCharge" placeholder="e.g. 5000" />
+      </div>
+
+      <button id="generateBtn">Generate Bill</button>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
